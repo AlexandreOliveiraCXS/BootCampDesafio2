@@ -27,7 +27,7 @@ function App() {
   }
 
   async function handleRemoveRepository(id) {
-    api.delete('repositories/'+ id);
+    await api.delete('repositories/'+ id);
     var index = repositories.findIndex(x => x.id === id )
     
     var copyRepositories = [...repositories];
